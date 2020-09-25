@@ -1,0 +1,18 @@
+import random
+
+def number_guess (number, number_range):
+  if number > number_range:
+    return "Your guess number is too high."
+  elif number < number_range:
+    return " Your guess number is too low."
+  else:
+    return "This is your number."
+    
+number_range = random.randint(0,1000)
+
+while True:
+  x = int(input('Please enter your number'))
+  result = number_guess(x,number_range)
+  print(result)
+  if result == "This is your number.":
+    break
